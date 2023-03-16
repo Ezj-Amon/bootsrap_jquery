@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="city">
+
+    </ul>
+
+    <script type="text/javascript">
+        var citylist = ["北京","上海","广州"]
+        for(let idx in citylist){
+            let text = citylist[idx]
+            //创建li标签
+            let tag = document.createElement('li')
+            //写入li标签的内容
+            tag.innerText = text
+            // 添加到id = city标签内
+            let parentTag = document.getElementById('city')
+            parentTag.appendChild(tag)
+        }
+    </script>
+</body>
+</html>

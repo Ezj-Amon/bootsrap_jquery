@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody id="body"></tbody>
+    </table>
+
+    <script>
+        var datalist = [
+                {id:1,name:'xx1',age:19},
+                {id:1,name:'xx2',age:19},
+                {id:1,name:'xx3',age:19},
+                {id:1,name:'xx4',age:19},
+                {id:1,name:'xx5',age:19},
+                {id:1,name:'xx6',age:19}
+        ]
+        for(var idx in datalist){
+          let info = datalist[idx]
+
+          let tr = document.createElement('tr')
+          for (let key in info){
+            let text = info[key]
+            let td = document.createElement('td')
+            td.innerText = text
+            tr.appendChild(td)
+          }
+          let body = document.getElementById('body')
+          body.appendChild(tr)
+        }
+    </script>
+</body>
+</html>
